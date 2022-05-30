@@ -3,8 +3,8 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Waktu pembuatan: 25 Bulan Mei 2022 pada 05.40
--- Versi server: 10.4.24-MariaDB
+-- Waktu pembuatan: 30 Bulan Mei 2022 pada 15.36
+-- Versi server: 10.4.22-MariaDB
 -- Versi PHP: 7.4.28
 
 SET SQL_MODE = "NO_AUTO_VALUE_ON_ZERO";
@@ -44,7 +44,8 @@ CREATE TABLE `cart` (
 --
 
 INSERT INTO `cart` (`id_cart`, `id_user`, `id_produk`, `nama`, `harga`, `kuantiti`, `gambar`, `kategori`, `total`) VALUES
-(1, 1, 64, 'CPU Fan Water Cooler Blue', 1760000, 1, '2121010131311612084289fanwatercooler.jfif', 'Komputer', 1760000);
+(1, 1, 64, 'CPU Fan Water Cooler Blue', 1760000, 9, '2121010131311612084289fanwatercooler.jfif', 'Komputer', 1760000),
+(2, 0, 60, 'Lenovo Yoga S', 12000000, 1, '2121010124241611487700lenovoyoga.jpg', 'Laptop', 12000000);
 
 -- --------------------------------------------------------
 
@@ -137,16 +138,16 @@ CREATE TABLE `produk` (
 --
 
 INSERT INTO `produk` (`id_produk`, `nama`, `harga`, `stok`, `gambar`, `kategori`, `deskripsi`, `createat`, `updateat`) VALUES
-(48, 'Xiaomi Redmi Note 7', 1200000, 100, '2121010124241611470863A93-listimage-white-v1.png', 'Ponsel', 'wsdfsfdgdfg', '2021-01-24 13:42:25', '2021-01-24 07:47:43'),
-(49, 'Redmi 7A', 1799000, 100, '2121010124241611447418C3M.png', 'Ponsel', 'Lorem ipsum dolor sit amet consectetur adipisicing elit. Accusamus officiis harum id voluptas fugit, voluptatem pariatur voluptatum vel culpa magnam, dolorum blanditiis quae ut illo libero non a, obcaecati iusto?', '0000-00-00 00:00:00', '0000-00-00 00:00:00'),
-(57, 'Xiaomi Redmi Note 7', 1909999, 100, '2121010124241611450046A92-white.png', 'Ponsel', '\r\nLorem ipsum dolor sit amet consectetur adipisicing elit. Accusamus officiis harum id voluptas fugit, voluptatem pariatur voluptatum vel culpa magnam, dolorum blanditiis quae ut illo libero non a, obcaecati iusto?', '0000-00-00 00:00:00', '0000-00-00 00:00:00'),
-(58, 'Laptop lenovo', 6000000, 5, '2121010124241611450092lenovothinkpade480.jpg', 'Laptop', '\r\n\r\nLorem ipsum dolor sit amet consectetur adipisicing elit. Accusamus officiis harum id voluptas fugit, voluptatem pariatur voluptatum vel culpa magnam, dolorum blanditiis quae ut illo libero non a, obcaecati iusto?', '2021-01-31 18:00:33', '0000-00-00 00:00:00'),
-(59, 'Oppo FindX', 3299000, 490, '2121010124241611470962Findx2-pro.png', 'Ponsel', 'Hp mahala berkelas suport FF, dan pubg', '2021-01-31 18:00:33', '2021-01-24 07:52:53'),
-(60, 'Lenovo Yoga S', 12000000, 10, '2121010124241611487700lenovoyoga.jpg', 'Laptop', 'LAptop murah berkualitas cocok untuk anda yang sering bekerja memanfaatkan laptop, laptop dengan spesifikasi yang cukup bagus mampu bekerja setiap hari.', '2021-01-24 12:28:20', '0000-00-00 00:00:00'),
-(61, 'Bayu Pamungkas', 9000000, 100, '2121010127271611717147lenovothinkpade480.jpg', 'Komputer', 'Lorem ipsum dolor sit amet consectetur adipisicing elit. Accusamus officiis harum id voluptas fugit, voluptatem pariatur voluptatum vel culpa magnam, dolorum blanditiis quae ut illo libero non a, obcaecati iusto?', '2021-01-27 04:12:27', '2021-01-31 09:11:58'),
-(62, 'Mobo MSI Gaming', 2600000, 10, '2121010131311612084164mobomsigaming.jfif', 'Komputer', 'Menampilkan pre-installed I/O shielding, membuat proses instalasi Anda lebih mudah dan lebih aman. Desain patent-pending yang melindungi port I / O Anda dan juga mencegah electrostatic discharge damage, menjadikan motherboard Anda fondasi gaming yang kuat', '2021-01-31 10:09:24', '0000-00-00 00:00:00'),
-(63, 'AMD Ryzhen 9 5000X CPU 12 Core', 5000000, 10, '2121010131311612084235amdryzhen95900X.jpg', 'Komputer', 'Teknologi Core Boost menggabungkan premium layout MSI dan optimized power design yang memungkinkan pengiriman arus yang lebih cepat dan tidak terdistorsi ke CPU dengan presisi pin-point. Tidak hanya mendukung multi-core CPU, juga menciptakan kondisi yang sempurna untuk overclocking CPU Anda.Teknologi Core Boost menggabungkan premium layout MSI dan optimized power design yang memungkinkan pengiriman arus yang lebih cepat dan tidak terdistorsi ke CPU dengan presisi pin-point. Tidak hanya mendukung multi-core CPU, juga menciptakan kondisi yang sempurna untuk overclocking CPU Anda.', '2021-01-31 17:57:49', '2021-01-31 10:16:58'),
-(64, 'CPU Fan Water Cooler Blue', 1760000, 3, '2121010131311612084289fanwatercooler.jfif', 'Komputer', 'Mendinginkan PC Anda adalah penting untuk kinerja yang andal. Motherboard MSI memiliki power design yang luar biasa dengan heatsink yang solid dan heavy. Kami telah memastikan untuk menyertakan fan headers yang cukup dengan kontrol penuh yang memungkinkan Anda untuk mendinginkan sistem sesuka Anda ', '2021-01-31 17:57:49', '0000-00-00 00:00:00');
+(48, 'Gamis', 225000, 100, 'zettadress.jpg', 'Gamis', 'Tidak menerawang, cantik dipakai kemana-mana. Size S ld 98, size M ld 104 dan size L ld 110.', '2022-05-30 20:31:53', '2021-01-24 07:47:43'),
+(49, 'Tunik', 150000, 100, 'tunik1.jpg', 'Tunik', 'Cakep, cocok dipakai untuk wanita kantoran. Detail size : Lingkar Dada 104cm, Panjang Baju 102cm, Panjang Lengan 53cm, dan Lingkar Lengan 47cm', '2022-05-30 20:30:44', '0000-00-00 00:00:00'),
+(57, 'Mukenah', 250000, 100, 'mukena1.jpg', 'Mukenah', 'Bahan rayyon premium, size super jumbo, best seller, high quality', '2022-05-30 20:29:00', '0000-00-00 00:00:00'),
+(58, 'Rok', 120000, 5, 'rok1.jpg', 'Rok', 'Roknya sangat cantik, berwarna hitam, motif bintang-bintang. Cocok ootd an untuk wanita kekinian', '2022-05-30 20:27:33', '0000-00-00 00:00:00'),
+(59, 'Gamis', 210000, 490, 'gamis1.jpg', 'Gamis', 'Tidak menerawang, elegan berwarna hitam. Size S ld 98, size M ld 104 dan size L ld 110.', '2022-05-30 20:26:33', '2021-01-24 07:52:53'),
+(60, 'Tunik', 160000, 10, 'tunik2.jpg', 'Tunik', 'Cantik, motif bunga-bunga dan nyaman di pakai. Detail size : Lingkar Dada 104cm, Panjang Baju 100cm, Panjang Lengan 50cm, dan Lingkar Lengan 45cm', '2022-05-30 20:25:09', '0000-00-00 00:00:00'),
+(61, 'Mukenah', 200000, 100, 'mukena2.jpg', 'Mukenah', 'Bahan : Rayon premium, size jumbo, best seller dan high quality', '2022-05-30 20:23:06', '2021-01-31 09:11:58'),
+(62, 'Rok', 160000, 10, 'rok2.jpg', 'Rok', 'Roknya sangat cantik, berwarna pink. Cocok ootd an untuk wanita feminim.', '2022-05-30 20:20:35', '0000-00-00 00:00:00'),
+(63, 'Gamis', 280000, 10, 'Gamis2.jpg', 'Gamis', 'Tidak menerawang dan adem tentunya. Size S ld 98, size M ld 104 dan size L ld 110.', '2022-05-30 20:15:23', '2021-01-31 10:16:58'),
+(64, 'Tunik', 300000, 10, 'tunik3.jpg', 'Tunik', 'Cakep dan nyaman di pakai. Detail size :\r\nLingkar Dada 106cm,\r\nPanjang Baju 110cm,\r\nPanjang Lengan 54cm, dan \r\nLingkar Lengan 46cm', '2022-05-30 20:08:00', '0000-00-00 00:00:00');
 
 -- --------------------------------------------------------
 
@@ -251,6 +252,7 @@ CREATE TABLE `users` (
 --
 
 INSERT INTO `users` (`id_user`, `nama`, `email`, `sandi`, `image`, `role`, `createat`, `updateat`) VALUES
+(0, 'putri', 'putri_ayunengsih@gmail.com', '$2y$10$ozy98z22zXQuv5axmGO/P.8CJUe9Key6UQAeIR.hNNKaG2u01UL.K', 'default.png', '2', '2022-05-28 07:15:03', '0000-00-00 00:00:00'),
 (1, 'Bayu Pamungkas', 'bayhek335@gmail.com', '$2y$10$JACVc4V32Jp/fpJJNWJc7eOT9F2sBQcYhZraZUWDrPz6W8R7/ElM6', 'default.png', '1', '2021-01-31 16:28:35', NULL);
 
 --
@@ -321,7 +323,7 @@ ALTER TABLE `users`
 -- AUTO_INCREMENT untuk tabel `cart`
 --
 ALTER TABLE `cart`
-  MODIFY `id_cart` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=2;
+  MODIFY `id_cart` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=3;
 
 --
 -- AUTO_INCREMENT untuk tabel `kontak`
